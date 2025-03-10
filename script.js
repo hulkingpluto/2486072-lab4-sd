@@ -56,7 +56,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         <section>
                             <ul class="square-list">
                                 <li>
-                                    <span>${neighbor.name.common}</span>
+                                    <strong>${neighbor.name.common}</strong>
                                     <img src="${neighbor.flags.svg}" alt="Flag of ${neighbor.name.common}" class="country-flag">
                                 </li>
                             </ul>
