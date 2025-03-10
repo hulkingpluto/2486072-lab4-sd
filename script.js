@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
     button.addEventListener('click', async function (event) {
         event.preventDefault(); 
         
-        const countryName = countryInput.value.trim(); // Get input value
+        const countryName = countryInput.value.trim();
 
         if (countryName === "") {
             countryInfoSection.innerHTML = "<p style='color:red;'>Please enter a country name.</p>";
@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const response = await fetch(`https://restcountries.com/v3.1/name/${countryName}?fullText=true`);
             
             if (!response.ok) {
-                throw new Error("Country not found. Please check the spelling and try again.");
+                throw new Error("Country not found");
             }
 
             const data = await response.json();
@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const capital = country.capital ? country.capital[0] : "No capital available";
             const population = country.population.toLocaleString(); // Format with commas
             const region = country.region;
-            const flag = country.flags.svg; // Use SVG flag
+            const flag = country.flags.svg; 
 
             //country info
             countryInfoSection.innerHTML = `
@@ -53,14 +53,14 @@ document.addEventListener('DOMContentLoaded', () => {
                  </ul>`;
                  borderData.forEach(neighbor => {
                     borderingCountriesSection.innerHTML += `
-                        <div>
+                        <section>
                             <ul class="square-list">
                                 <li>
                                     <span>${neighbor.name.common}</span>
                                     <img src="${neighbor.flags.svg}" alt="Flag of ${neighbor.name.common}" class="country-flag">
                                 </li>
                             </ul>
-                        </div>
+                        </section>
                     `;
                 });
                 
