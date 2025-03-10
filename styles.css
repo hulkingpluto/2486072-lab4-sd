@@ -1,1 +1,50 @@
+body {
+    flex-direction: column;
+    height: 100vh; 
+    background-color: #f4f4f4;
+    padding: 20px;
+    line-height: 1.6;
+}
 
+input {
+    width: 250px; 
+    height: 40px; 
+    font-size: 16px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+input:focus {
+    border-color: #007bff; /* Highlight input on focus */
+}
+
+button {
+    width: 120px;
+    height: 40px;
+    background-color: grey; /* Blue background */
+    color: white; /* White text */
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #343637; /* Darker blue on hover */
+}
+
+.square-list {
+    list-style-type: square; /* Square bullet points */
+    padding-left: 20px; /* Add spacing */
+    font-size: 16px; /* Adjust text size */
+}
+
+.square-list li {
+    margin-bottom: 5px; /* Space between list items */
+}
+
+.country-flag {
+    width: 700px; /* Adjust width */
+    height: auto; /* Maintain aspect ratio */
+    max-width: 100%; /* Prevent overflow */
+    display: block;
+}
